@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JogarMoeda.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+            
+            <Image
+                x:Name="imgMoeda"
+                Source="baixados.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                HorizontalOptions="Center"
+                />
+
+            <Label
+                x:Name="Moeda"
+                Text="Moeda!"
+                HorizontalOptions="Center"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Picker x:Name="SelecionarPicker"
+                    HorizontalOptions="Center"
+                    Title="Selecione o lado da moeda">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Coroa</x:String>
+                        <x:String>Cara</x:String>
+
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label
+                x:Name="Resultabel"
+                Text="Cara ou coroa"
+                HorizontalOptions="Center"
+                 />
+
+            <Button
+                x:Name="StartButton"
+                Text="Jogar" 
+                Clicked="StartButton_Clicked"
+                HorizontalOptions="Center" 
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
